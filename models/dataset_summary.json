@@ -1,0 +1,22 @@
+{
+  "n_orders": 100000,
+  "n_columns": 32,
+  "n_pincodes": 16012,
+  "n_districts": 686,
+  "n_states": 38,
+  "blended_rto_rate": 0.17036,
+  "cod_rto_rate": 0.20082,
+  "prepaid_rto_rate": 0.04778,
+  "cod_share": 0.80095,
+  "rto_near_rate": 0.14935,
+  "rto_moderate_rate": 0.1697,
+  "rto_far_rate": 0.21845,
+  "distance_penalty_pct": 46.3,
+  "s_addr_mean": 0.7079,
+  "s_addr_vs_outcome_corr": -0.0739,
+  "calibration_vs_case_brie": {
+    "blended_rto_pp": 0.04,
+    "cod_rto_pp": 0.08,
+    "prepaid_rto_pp": 0.22
+  }
+}

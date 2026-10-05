@@ -1,0 +1,98 @@
+{
+  "disclosure": "Fitted on simulated rider kinematics with deliberate class overlap (7% of genuine attempts are hard deliveries, 12% of faked attempts are sophisticated). No public rider-telemetry corpus exists.",
+  "evaluation_protocol": "Unsupervised fit (contamination=\"auto\") on a 35,000-row training split. Operating threshold = 10th-percentile TRAIN score (ops capacity constraint, no labels). Scored once on the 15,000-row held-out split.",
+  "total_attempts": 50000,
+  "n_faked_ground_truth": 5000,
+  "n_train": 35000,
+  "n_test": 15000,
+  "operating_budget_pct": 10.0,
+  "operating_threshold": 0.0674,
+  "accuracy": 0.9753,
+  "faked_precision": 0.8812,
+  "faked_recall": 0.8707,
+  "faked_f1": 0.8759,
+  "genuine_precision": 0.9856,
+  "genuine_recall": 0.987,
+  "macro_f1": 0.9311,
+  "confusion_matrix": {
+    "tn": 13324,
+    "fp": 176,
+    "fn": 194,
+    "tp": 1306
+  },
+  "frontier": [
+    {
+      "audit_budget_pct": 2,
+      "precision": 0.9668,
+      "recall": 0.194,
+      "f1": 0.3232,
+      "accuracy": 0.9187,
+      "genuine_precision": 0.9177
+    },
+    {
+      "audit_budget_pct": 4,
+      "precision": 0.9507,
+      "recall": 0.3727,
+      "f1": 0.5354,
+      "accuracy": 0.9353,
+      "genuine_precision": 0.9347
+    },
+    {
+      "audit_budget_pct": 6,
+      "precision": 0.9355,
+      "recall": 0.5607,
+      "f1": 0.7011,
+      "accuracy": 0.9522,
+      "genuine_precision": 0.9533
+    },
+    {
+      "audit_budget_pct": 8,
+      "precision": 0.9066,
+      "recall": 0.7187,
+      "f1": 0.8018,
+      "accuracy": 0.9645,
+      "genuine_precision": 0.9694
+    },
+    {
+      "audit_budget_pct": 10,
+      "precision": 0.8812,
+      "recall": 0.8707,
+      "f1": 0.8759,
+      "accuracy": 0.9753,
+      "genuine_precision": 0.9856
+    },
+    {
+      "audit_budget_pct": 12,
+      "precision": 0.8291,
+      "recall": 0.9893,
+      "f1": 0.9021,
+      "accuracy": 0.9785,
+      "genuine_precision": 0.9988
+    },
+    {
+      "audit_budget_pct": 15,
+      "precision": 0.6714,
+      "recall": 1.0,
+      "f1": 0.8034,
+      "accuracy": 0.9511,
+      "genuine_precision": 1.0
+    },
+    {
+      "audit_budget_pct": 18,
+      "precision": 0.5525,
+      "recall": 1.0,
+      "f1": 0.7117,
+      "accuracy": 0.919,
+      "genuine_precision": 1.0
+    },
+    {
+      "audit_budget_pct": 20,
+      "precision": 0.4957,
+      "recall": 1.0,
+      "f1": 0.6628,
+      "accuracy": 0.8983,
+      "genuine_precision": 1.0
+    }
+  ],
+  "model_size_mb": 3.18
+}

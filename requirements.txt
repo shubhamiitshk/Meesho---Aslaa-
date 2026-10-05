@@ -1,0 +1,22 @@
+# Core scientific stack
+# Versions verified on Python 3.11.9 (the interpreter this project was built on).
+numpy==2.3.5
+pandas==3.0.3
+scikit-learn==1.6.1
+
+# Gradient boosting: classifier + X-Learner base learners
+lightgbm==4.7.0
+xgboost==3.2.0
+
+# Explainability (TreeSHAP) and model persistence
+shap==0.51.0
+joblib==1.5.3
+
+# Figures
+matplotlib==3.11.1
+
+# India Post reference data: pincode centroids and DIGIPIN encoding
+bharataddress==0.4.0
+
+# Test runner (test_suite.py also runs standalone via __main__)
+pytest==9.1.1

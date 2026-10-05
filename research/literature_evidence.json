@@ -1,0 +1,74 @@
+{
+  "_README": [
+    "SOURCE-SCOPED EVIDENCE LEDGER — reviewed 2026-10-04.",
+    "Each entry identifies population, unit, evidence type, and transfer limits.",
+    "Case-pack values are assignment assumptions; vendor numbers remain vendor claims; survey findings remain unverified report claims.",
+    "Do not combine unlike categories into a Valmo cause distribution or use an external percentage as the proposal's expected effect."
+  ],
+  "case_brief": {
+    "source": "DICE Challenge Season 3 — Valmo case brief",
+    "local_copy": "case/DICE Challenge S3  Valmo Case studies.pdf",
+    "evidence_type": "assignment-provided illustrative planning inputs",
+    "inputs_reported": {
+      "cod_share_pct": 80,
+      "prepaid_share_pct": 20,
+      "cod_rto_pct": 20,
+      "prepaid_rto_pct": 5,
+      "forward_cost_rs": 50,
+      "reverse_cost_ceiling_rs": 120,
+      "last_mile_cost_node_rs": 21,
+      "distance_pattern_pct": [15, 17, 22]
+    },
+    "limitations": [
+      "These values are not current Valmo records or a measured baseline.",
+      "The distance table row and caption conflict about whether the values describe returned-undelivered orders or delivery success; confirm the intended metric before interpreting it.",
+      "The brief supplies no order volume, Valmo cause distribution, or measured treatment effect."
+    ]
+  },
+  "company_disclosure": {
+    "source": "Meesho Q1 FY27 shareholder letter",
+    "url": "https://static-assets.meesho.com/investor-relations/1784806298911/Q1ShareholdersLetter.pdf",
+    "evidence_type": "company-reported marketplace disclosure",
+    "reported_context": [
+      "About 37% of shipped orders were prepaid in Q1 FY27.",
+      "The company attributes lower RTO/cancellations year over year to TrustMesh and predictive-routing investments."
+    ],
+    "does_not_establish": [
+      "Valmo-specific RTO or cause shares.",
+      "The quantified contribution of each cited investment or any effect of this proposal.",
+      "A transferable intervention effect."
+    ]
+  },
+  "vendor_category_example": {
+    "source": "ClickPost 90-Day RTO Reduction Playbook",
+    "url": "https://www.clickpost.ai/90-day-rto-reduction-playbook",
+    "evidence_type": "vendor-authored playbook",
+    "reported_category": "fake or fraudulent orders",
+    "reported_band_pct": [6, 12],
+    "interpretation": "This is a vendor category and not a false delivery-attempt-status event rate. Do not use it to rebase the survey's rider self-report or as a Valmo benchmark.",
+    "not_independent_causal_evidence": true
+  },
+  "postal_address_context": {
+    "source": "Universal Postal Union Think Tank Brief No. 2/2025",
+    "url": "https://www.upu.int/UPU/media/upu/publications/202507dprmThinkTankBriefNo2-2025.pdf",
+    "evidence_type": "global postal-operator analysis",
+    "use": "External context that address quality can matter to first-delivery outcomes.",
+    "does_not_establish": ["an Indian e-commerce effect", "customer take-up of an address prompt", "a Valmo effect size"]
+  },
+  "repository_prototypes": {
+    "status": "SYNTHETIC_OR_ILLUSTRATIVE",
+    "limitations": [
+      "Generated orders, outcomes, assignments, telemetry, and model diagnostics are not Valmo observations.",
+      "Calibration to selected case-pack marginals is not independent validation.",
+      "Prototype metrics do not establish production accuracy, causal lift, or operational value."
+    ]
+  },
+  "pilot_evidence_needed": [
+    "Authorized, de-identified baseline events with eligibility, outcome window, exclusions, and missingness defined.",
+    "A privacy-reviewed audit of partner failure reasons against underlying event records.",
+    "An overlap map for riders, routes, hubs, and carriers before selecting an assignment unit.",
+    "A pre-registered primary outcome, power/MDE, stopping rule, and customer, rider, seller, service, and privacy guardrails.",
+    "Concurrent-control effects with uncertainty and all incremental costs before a net-value claim."
+  ],
+  "related_review": "research/prior_art_audit.json"
+}

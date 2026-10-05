@@ -1,0 +1,26 @@
+{
+  "disclosure": "Trained on a synthetic RCT (N=40,000, randomised W~Bernoulli(0.40)) aligned to Valmo order marginals. Valmo publishes no randomised trial data. Unconfoundedness holds by construction; ground-truth CATE is retained to audit estimator recovery.",
+  "n": 12000,
+  "n_treated": 4789,
+  "n_control": 7211,
+  "observed_ate": 0.142,
+  "mean_predicted_cate": 0.1484,
+  "auuc": 500.7,
+  "auuc_random_baseline": 341.26,
+  "auuc_perfect_oracle": 1647.08,
+  "auuc_normalized": 0.1221,
+  "auuc_lift_over_random_pct": 46.7,
+  "permutation_p_value": 0.004975124378109453,
+  "n_permutations": 200,
+  "max_qini_gain": 681.0,
+  "cate_recovery_corr_with_truth": 0.9585,
+  "cate_recovery_mae": 0.0305,
+  "cv_normalized_auuc_mean": 0.1304,
+  "cv_normalized_auuc_ci": [
+    0.1239,
+    0.1369
+  ],
+  "economic_threshold": 0.29167,
+  "persuadable_pct": 12.2,
+  "net_margin_per_rescue_rs": 85.0
+}

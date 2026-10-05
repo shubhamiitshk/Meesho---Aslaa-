@@ -1,0 +1,108 @@
+{
+  "source_package": "bharataddress",
+  "source_version": "0.4.0",
+  "source_kind": "open-source, vendored reference data",
+  "real": {
+    "india_post_pincodes": 26711,
+    "post_offices": 57384,
+    "pincodes_with_coordinates": 16459,
+    "geocoded_coverage_pct": 61.6,
+    "distinct_states": 39,
+    "distinct_districts": 696,
+    "digipin_cell_m": 3.82
+  },
+  "synthetic": {
+    "order_book": "100,000 orders; outcomes drawn from a logit calibrated to the case brief. Geography is real, outcomes are not.",
+    "uplift_trial": "40,000-arm synthetic RCT, randomised W ~ Bernoulli(0.40)",
+    "telemetry": "50,000 simulated delivery attempts with deliberate class overlap",
+    "address_strings": "templated Indian addresses, parsed by the real tokenizer"
+  },
+  "checks": [
+    {
+      "claim": "India Post pincode table is real and vendored locally",
+      "status": "pass",
+      "detail": "bharataddress 0.4.0 ships pincodes.json (4.1 MB)"
+    },
+    {
+      "claim": "pincode count",
+      "status": "pass",
+      "detail": "26,711 pincodes"
+    },
+    {
+      "claim": "post OFFICE count (not the same as the pincode count)",
+      "status": "pass",
+      "detail": "57,384 post offices across 26,711 pincodes"
+    },
+    {
+      "claim": "geocoded coverage is partial, and we say so",
+      "status": "pass",
+      "detail": "16,459 of 26,711 pincodes carry coordinates (61.6%) \u2014 \"exact centroids for all\" would be false"
+    },
+    {
+      "claim": "state coverage",
+      "status": "pass",
+      "detail": "39 distinct state strings in the source table (the deck previously asserted \"all 28 states & 8 UTs\")"
+    },
+    {
+      "claim": "district coverage",
+      "status": "pass",
+      "detail": "696 distinct districts"
+    },
+    {
+      "claim": "DIGIPIN encoder is the India Post reference implementation",
+      "status": "pass",
+      "detail": "module documents itself as a port of the Apache-2.0 reference at INDIAPOST-gov/digipin (Dept of Posts x IIT Hyderabad x NRSC)"
+    },
+    {
+      "claim": "cell size is 3.8 m, not 4 m",
+      "status": "pass",
+      "detail": "36 deg / 4^10 = 0.0000343 deg = 3.82 m per axis"
+    },
+    {
+      "claim": "encode/decode round-trips within one cell",
+      "status": "pass",
+      "detail": "Delhi (28.6139, 77.2090) -> 39J-438-TJC7 -> 0.28 m error"
+    },
+    {
+      "claim": "every pincode used is a real India Post pincode",
+      "status": "pass",
+      "detail": "all 16,012 pincodes used are present in the source table"
+    },
+    {
+      "claim": "state names are real",
+      "status": "pass",
+      "detail": "38 distinct states, all matching the source table"
+    },
+    {
+      "claim": "district names are real",
+      "status": "pass",
+      "detail": "686 distinct districts, all matching the source table"
+    },
+    {
+      "claim": "no missing coordinates",
+      "status": "pass",
+      "detail": "100,000 rows, all geocoded"
+    },
+    {
+      "claim": "coordinates are centroid + documented jitter, not noise",
+      "status": "pass",
+      "detail": "mean |\u0394lat| = 0.0095 deg vs the generator's declared sigma of 0.012 deg (individual delivery point, not the post office)"
+    },
+    {
+      "claim": "DIGIPIN codes are the correct 12-character format",
+      "status": "pass",
+      "detail": "format XXX-XXX-XXXX, 100,000 codes"
+    },
+    {
+      "claim": "order outcomes are SYNTHESIS, not measurement",
+      "status": "pass",
+      "detail": "rto_flag is a Bernoulli draw from a calibrated logit whose intercept and distance coefficient were solved to match the case brief. It is not observed Valmo data and is never described as such."
+    },
+    {
+      "claim": "bharataddress is open source, so the deck must not say \"proprietary\"",
+      "status": "pass",
+      "detail": "the address graph is the open-source bharataddress package; the word \"proprietary\" on the deck contradicted the provenance disclosure on the same deck and has been removed"
+    }
+  ],
+  "all_passed": true
+}

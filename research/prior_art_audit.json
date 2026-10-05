@@ -1,0 +1,59 @@
+{
+  "_README": [
+    "FOCUSED PUBLIC PRIOR-ART SCAN — reviewed 2026-10-04.",
+    "This file records selected public product descriptions and their limits; it is not an exhaustive market census.",
+    "Presence of a feature is prior art. A vendor claim is not an independent causal result.",
+    "A search that did not find a deployment is not proof that no deployment exists.",
+    "Do not claim that the mechanisms below are new or that no provider has run a randomized trial."
+  ],
+  "capabilities_described_in_reviewed_sources": [
+    {
+      "capability": "COD payment and dynamic UPI QR",
+      "sources": [
+        {"name": "Cashfree UPI QR documentation", "url": "https://www.cashfree.com/upi-qr-code/"},
+        {"name": "PhonePe and Flipkart announcement", "url": "https://www.phonepe.com/press/phonepe-partners-with-flipkart-to-digitise-cash-on-delivery-payments/"},
+        {"name": "Amazon help page", "url": "https://www.amazon.in/gp/help/customer/display.html?nodeId=202054820"}
+      ],
+      "scope": "These sources describe existing payment-on-delivery or QR capabilities.",
+      "not_established": ["Valmo integration", "provider or seller settlement terms", "fees and refund handling", "incremental delivery effect"],
+      "proposal_implication": "Do not present doorstep QR as novel; treat payment-provider compatibility as an implementation question."
+    },
+    {
+      "capability": "NDR, customer messaging, and delivery recovery workflows",
+      "sources": [
+        {"name": "Delhivery SmartNDR", "url": "https://help.delhivery.com/docs/smartndr"},
+        {"name": "Delhivery NDR workflow", "url": "https://help.delhivery.com/docs/non-delivery-report-ndr"},
+        {"name": "Shiprocket RTO-reduction tools", "url": "https://support.shiprocket.in/support/solutions/articles/152000000948-how-can-i-reduce-my-rto-shipments-what-are-the-tools-offered-by-shiprocket-"},
+        {"name": "ClickPost 90-Day RTO Reduction Playbook", "url": "https://www.clickpost.ai/90-day-rto-reduction-playbook"}
+      ],
+      "scope": "Provider materials show that notifications and recovery tools exist as product categories.",
+      "not_established": ["independent effectiveness", "common operating definitions", "suitability for Valmo's partner network", "transferable lift"],
+      "proposal_implication": "The deck should differentiate through a feasible, measured decision process rather than claim a new message or NDR feature."
+    },
+    {
+      "capability": "Address and location assistance",
+      "sources": [
+        {"name": "UPU Think Tank Brief No. 2/2025", "url": "https://www.upu.int/UPU/media/upu/publications/202507dprmThinkTankBriefNo2-2025.pdf"}
+      ],
+      "scope": "Global postal-operator analysis; not an Indian marketplace or Valmo experiment.",
+      "not_established": ["local address-prompt adoption", "delivery lift in India e-commerce", "Valmo effect"],
+      "proposal_implication": "Use only as external context; validate any optional customer prompt locally."
+    }
+  ],
+  "category_warning": {
+    "source": "ClickPost 90-Day RTO Reduction Playbook",
+    "url": "https://www.clickpost.ai/90-day-rto-reduction-playbook",
+    "vendor_reported_fake_or_fraudulent_order_band_pct": [6, 12],
+    "interpretation": "Vendor category of fake or fraudulent orders; not a false rider-attempt-status event rate.",
+    "transferable_effect": false
+  },
+  "claims_not_supported_by_this_scan": [
+    "A complete ranking or census of every provider's features.",
+    "That no market participant has run a randomized delivery experiment.",
+    "That any provider's claimed percentage reduction will transfer to Valmo.",
+    "That a specific Valmo integration, policy, or seller permission currently exists.",
+    "That survey-reported rider attributions represent customer motives or order causes.",
+    "That a novel algorithm or intervention has been validated by repository simulations."
+  ],
+  "defensible_submission_position": "Existing tools provide prior art. The proposal asks for governed baseline data, audited reasons, a spillover-aware controlled test, full-cost economics, and explicit customer, rider, seller, service, and privacy guardrails. It makes no claim that this method is unprecedented."
+}

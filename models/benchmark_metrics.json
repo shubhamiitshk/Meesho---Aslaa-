@@ -1,0 +1,47 @@
+{
+  "p50_ms": 0.39,
+  "p90_ms": 0.561,
+  "p95_ms": 0.622,
+  "p99_ms": 0.75,
+  "mean_ms": 0.498,
+  "max_ms": 44.713,
+  "n_runs": 200,
+  "n_blocks": 3,
+  "n_samples": 600,
+  "p99_per_block_ms": [
+    0.757,
+    0.752,
+    0.601
+  ],
+  "n_warmup": 300,
+  "local_p99_budget_ms": 3.0,
+  "within_local_budget": true,
+  "latency_protocol": "P3 pooled blocks of 200 sequential single-order inferences (600 samples) after 300 warm-up calls, timed in-process with time.perf_counter_ns. Per-call timer excludes payload construction. Pooling is used because a tail quantile estimated from one block is unstable on a shared host.",
+  "parity": {
+    "n_rows_compared": 500,
+    "max_abs_probability_diff": 0.0,
+    "max_abs_cate_diff": 0.0,
+    "risk_tier_mismatches": 0,
+    "parity_ok": true,
+    "protocol": "Same orders scored through predict_single and predict_batch, then compared element by element. Proves the low-latency path returns the validated model output, so the latency claim and the reported metrics cannot refer to different systems."
+  },
+  "calibrator_parity": {
+    "probe_points": 4061,
+    "max_abs_diff": 0.0,
+    "exact_match": true,
+    "note": "np.interp against X_thresholds_/y_thresholds_ reproduces sklearn IsotonicRegression(out_of_bounds=\"clip\") exactly."
+  },
+  "batch_throughput_per_sec": 6296.0,
+  "batch_throughput_protocol": {
+    "rows": 1000,
+    "seconds": 0.1588,
+    "orders_per_sec": 6296.0
+  },
+  "contention_guard": {
+    "measured_p99_ms": 0.75,
+    "host_cpu_load_pct": 1.0,
+    "existing_p99_ms": 0.908,
+    "kept_existing": false,
+    "reason": "fresh run is materially better (0.750 ms vs stored 0.908 ms)"
+  }
+}

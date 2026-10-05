@@ -1,0 +1,61 @@
+{
+  "ceiling": {
+    "bayes_ceiling_auc": 0.6581,
+    "bayes_ceiling_auc_full_sample": 0.656,
+    "ceiling_population": "holdout n=20,000 (joined on row_index)",
+    "model_holdout_auc": 0.6552,
+    "raw_model_auc": 0.6546,
+    "gap_absolute": 0.0028,
+    "fraction_of_signal_captured": 0.9957,
+    "interpretation": "The ceiling is the ranking induced by the TRUE conditional probability, so it bounds a PERFECT estimator on this population. Both figures are computed on the same 20,000 holdout rows, and the ceiling is itself an estimate carrying sampling error -- which is why one of our own seed splits can land fractionally above it. Read the two numbers as \"the model is within noise of the best possible scorer\", not as an exact inequality.",
+    "disclosure": "The ceiling inherits OUR calibration assumptions -- we solved these coefficients so the population matches case brief Exhibit B. If the real process is sharper than the brief implies, the ceiling and the headroom are both higher. This bounds what the classifier could achieve on the data we have; it is not a claim about Valmo."
+  },
+  "seed_robustness": {
+    "seeds": [
+      42,
+      7,
+      2024,
+      99,
+      1234
+    ],
+    "per_seed": [
+      {
+        "seed": 42,
+        "roc_auc": 0.6546,
+        "pr_auc": 0.257,
+        "brier": 0.2305
+      },
+      {
+        "seed": 7,
+        "roc_auc": 0.6414,
+        "pr_auc": 0.2532,
+        "brier": 0.2332
+      },
+      {
+        "seed": 2024,
+        "roc_auc": 0.6504,
+        "pr_auc": 0.2578,
+        "brier": 0.2317
+      },
+      {
+        "seed": 99,
+        "roc_auc": 0.6555,
+        "pr_auc": 0.2568,
+        "brier": 0.2313
+      },
+      {
+        "seed": 1234,
+        "roc_auc": 0.6592,
+        "pr_auc": 0.263,
+        "brier": 0.2303
+      }
+    ],
+    "roc_auc_mean": 0.6522,
+    "roc_auc_std": 0.0068,
+    "roc_auc_min": 0.6414,
+    "roc_auc_max": 0.6592,
+    "brier_mean": 0.2314,
+    "brier_std": 0.0012,
+    "note": "Seeded splits and LightGBM bagging both move the holdout number slightly. The spread below is the honest error bar on the headline AUC."
+  }
+}

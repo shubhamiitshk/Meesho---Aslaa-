@@ -1,0 +1,166 @@
+{
+  "evaluation_protocol": "80/20 stratified holdout; models fit on the 80% only. All metrics below are out-of-sample.",
+  "n_test": 20000,
+  "lightgbm": {
+    "roc_auc": 0.6552,
+    "pr_auc": 0.2571,
+    "brier_score": 0.1352,
+    "log_loss": 0.4319,
+    "raw_brier": 0.2305,
+    "raw_log_loss": 0.6462,
+    "brier_reduction_pct": 41.3
+  },
+  "xgboost": {
+    "roc_auc": 0.6554,
+    "pr_auc": 0.2579,
+    "brier_score": 0.1352
+  },
+  "cross_validation": {
+    "lgb_roc_auc_mean": 0.651,
+    "lgb_roc_auc_std": 0.0053,
+    "lgb_pr_auc_mean": 0.2568,
+    "lgb_pr_auc_std": 0.0046,
+    "lgb_brier_mean": 0.2313,
+    "lgb_brier_std": 0.0004,
+    "xgb_roc_auc_mean": 0.6509,
+    "xgb_roc_auc_std": 0.0053,
+    "xgb_pr_auc_mean": 0.2569,
+    "xgb_brier_mean": 0.2317,
+    "folds": 5
+  },
+  "operating_points": {
+    "5": {
+      "n_flagged": 1000,
+      "true_positives": 333,
+      "precision": 0.333,
+      "recall": 0.0977,
+      "lift": 1.9548
+    },
+    "10": {
+      "n_flagged": 2000,
+      "true_positives": 597,
+      "precision": 0.2985,
+      "recall": 0.1752,
+      "lift": 1.7523
+    },
+    "20": {
+      "n_flagged": 4000,
+      "true_positives": 1099,
+      "precision": 0.2747,
+      "recall": 0.3226,
+      "lift": 1.6129
+    },
+    "30": {
+      "n_flagged": 6000,
+      "true_positives": 1540,
+      "precision": 0.2567,
+      "recall": 0.452,
+      "lift": 1.5067
+    },
+    "50": {
+      "n_flagged": 10000,
+      "true_positives": 2322,
+      "precision": 0.2322,
+      "recall": 0.6815,
+      "lift": 1.3631
+    }
+  },
+  "baseline_prevalence": 0.1704,
+  "thresholds": {
+    "p_star_whatsapp": 0.00292,
+    "p_star_discount": 0.29167,
+    "rule": "P(RTO) > C_action / V_reverse_avoided"
+  },
+  "policy_economics": {
+    "coupon_policy": {
+      "threshold": 0.29,
+      "n_orders": 20000,
+      "n_flagged": 902,
+      "coverage_pct": 0.05,
+      "true_rtos_caught": 294,
+      "true_rtos_missed": 3113,
+      "recall_of_rtos": 0.09,
+      "gross_benefit_rs": 35280.0,
+      "action_cost_rs": 31570.0,
+      "net_rs": 3710.0,
+      "net_rs_per_1000": 185.5,
+      "baseline_no_intervention_net_rs": -408840.0,
+      "baseline_blanket_discount_net_rs": -291160.0
+    },
+    "blanket_discount_net_rs": -291160.0,
+    "targeting_swing_rs": 294870.0,
+    "targeting_swing_rs_per_1000": 14743.5,
+    "whatsapp_by_contact_budget": {
+      "10": {
+        "threshold": 0.26,
+        "n_orders": 20000,
+        "n_flagged": 2008,
+        "coverage_pct": 0.1,
+        "true_rtos_caught": 598,
+        "true_rtos_missed": 2809,
+        "recall_of_rtos": 0.18,
+        "gross_benefit_rs": 71760.0,
+        "action_cost_rs": 702.8,
+        "net_rs": 71057.2,
+        "net_rs_per_1000": 3552.86,
+        "baseline_no_intervention_net_rs": -408840.0,
+        "baseline_blanket_discount_net_rs": 401840.0
+      },
+      "20": {
+        "threshold": 0.23,
+        "n_orders": 20000,
+        "n_flagged": 4026,
+        "coverage_pct": 0.2,
+        "true_rtos_caught": 1106,
+        "true_rtos_missed": 2301,
+        "recall_of_rtos": 0.32,
+        "gross_benefit_rs": 132720.0,
+        "action_cost_rs": 1409.1,
+        "net_rs": 131310.9,
+        "net_rs_per_1000": 6565.54,
+        "baseline_no_intervention_net_rs": -408840.0,
+        "baseline_blanket_discount_net_rs": 401840.0
+      },
+      "30": {
+        "threshold": 0.21,
+        "n_orders": 20000,
+        "n_flagged": 6097,
+        "coverage_pct": 0.3,
+        "true_rtos_caught": 1561,
+        "true_rtos_missed": 1846,
+        "recall_of_rtos": 0.46,
+        "gross_benefit_rs": 187320.0,
+        "action_cost_rs": 2133.95,
+        "net_rs": 185186.05,
+        "net_rs_per_1000": 9259.3,
+        "baseline_no_intervention_net_rs": -408840.0,
+        "baseline_blanket_discount_net_rs": 401840.0
+      },
+      "50": {
+        "threshold": 0.18,
+        "n_orders": 20000,
+        "n_flagged": 10031,
+        "coverage_pct": 0.5,
+        "true_rtos_caught": 2328,
+        "true_rtos_missed": 1079,
+        "recall_of_rtos": 0.68,
+        "gross_benefit_rs": 279360.0,
+        "action_cost_rs": 3510.85,
+        "net_rs": 275849.15,
+        "net_rs_per_1000": 13792.46,
+        "baseline_no_intervention_net_rs": -408840.0,
+        "baseline_blanket_discount_net_rs": 401840.0
+      }
+    }
+  },
+  "top_features": [
+    "distance_km",
+    "s_addr",
+    "pin_mismatch_m",
+    "order_value",
+    "prior_rto_rate",
+    "whatsapp_response_rate",
+    "delay_days",
+    "address_char_len"
+  ]
+}

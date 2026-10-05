@@ -1,0 +1,308 @@
+{
+  "parameters": {
+    "daily_orders": 1500000,
+    "cod_share": 0.8,
+    "cod_rto_baseline": 0.2,
+    "prepaid_rto_baseline": 0.05,
+    "forward_cost_rs": 50.0,
+    "reverse_cost_rs": 120.0,
+    "coupon_cost_rs": 35.0,
+    "coupon_cap_per_day": 15000
+  },
+  "opex_lines_cr": {
+    "conversational_messaging": 3.26,
+    "pilot_incentive_restructuring": 15.0,
+    "cloud_infra_maps_apis": 5.0,
+    "hub_staging_hardware": 12.0,
+    "doorstep_upi_cash_pool": 19.16
+  },
+  "rto_paradox": {
+    "rto_orders": 93075000.0,
+    "blended_rto_rate": 0.17,
+    "spend_on_rto_cr": 1582.275,
+    "spend_on_delivered_cr": 2272.125,
+    "total_spend_cr": 3854.4,
+    "rto_share_of_spend_pct": 41.05113636363637,
+    "rto_share_counting_reverse_only_pct": 28.97727272727273
+  },
+  "baseline_vs_target": {
+    "annual_rto_baseline": 93075000.0,
+    "annual_rto_target": 65700000.00000001,
+    "blended_baseline": 0.17,
+    "blended_target": 0.12000000000000001,
+    "bps_reduction": 499.9999999999999,
+    "reverse_spend_baseline_cr": 1116.9,
+    "reverse_spend_target_cr": 788.4000000000001,
+    "gross_savings_cr": 328.4999999999999
+  },
+  "headline": {
+    "gross_savings_cr": 328.4999999999999,
+    "total_opex_cr": 54.42,
+    "conditional_net_after_costs_cr": 274.07999999999987,
+    "modeled_net_to_opex_pct": 503.6383682469678,
+    "payback_ratio_x": 6.036383682469678
+  },
+  "sensitivity": [
+    {
+      "cod_drop_pp": 0,
+      "cod_rto": 0.2,
+      "blended_rto": 0.168,
+      "salvage_5": -10.514880000000005,
+      "salvage_10": 20.250240000000005,
+      "salvage_15": 51.01536,
+      "salvage_20": 81.78048
+    },
+    {
+      "cod_drop_pp": 1,
+      "cod_rto": 0.19,
+      "blended_rto": 0.16,
+      "salvage_5": 42.04512,
+      "salvage_10": 72.81024000000001,
+      "salvage_15": 103.57536,
+      "salvage_20": 134.34048
+    },
+    {
+      "cod_drop_pp": 2,
+      "cod_rto": 0.18000000000000002,
+      "blended_rto": 0.15200000000000002,
+      "salvage_5": 94.60512000000001,
+      "salvage_10": 125.37024000000001,
+      "salvage_15": 156.13536,
+      "salvage_20": 186.90048000000002
+    },
+    {
+      "cod_drop_pp": 3,
+      "cod_rto": 0.17,
+      "blended_rto": 0.144,
+      "salvage_5": 147.16512,
+      "salvage_10": 177.93023999999997,
+      "salvage_15": 208.69536,
+      "salvage_20": 239.46047999999996
+    },
+    {
+      "cod_drop_pp": 4,
+      "cod_rto": 0.16,
+      "blended_rto": 0.136,
+      "salvage_5": 199.72512,
+      "salvage_10": 230.49023999999997,
+      "salvage_15": 261.25536,
+      "salvage_20": 292.02047999999996
+    },
+    {
+      "cod_drop_pp": 5,
+      "cod_rto": 0.15000000000000002,
+      "blended_rto": 0.128,
+      "salvage_5": 252.28512,
+      "salvage_10": 283.05024,
+      "salvage_15": 313.81536,
+      "salvage_20": 344.58047999999997
+    },
+    {
+      "cod_drop_pp": 6,
+      "cod_rto": 0.14,
+      "blended_rto": 0.12000000000000001,
+      "salvage_5": 304.84512,
+      "salvage_10": 335.61024,
+      "salvage_15": 366.37536,
+      "salvage_20": 397.14047999999997
+    }
+  ],
+  "breakeven": {
+    "opex_cr": 54.42,
+    "rescues_needed_per_year": 4535000.0,
+    "cod_rto_needed": 0.1921461187214612,
+    "cod_drop_pp_needed": 0.7853881278538813,
+    "blended_needed": 0.16171689497716896,
+    "blended_bps_reduction_needed": 82.83105022831083
+  },
+  "cod_mix_scenario": {
+    "baseline_blended_rto": 0.12,
+    "model_rto_bps_reduction": 500.0,
+    "scenarios": [
+      {
+        "label": "No mix change",
+        "cod_share": 0.8,
+        "prepaid_share": 0.2,
+        "blended_rto": 0.12,
+        "blended_bps_move": 0.0,
+        "orders_moved_to_prepaid": 0,
+        "orders_lost_at_checkout": 0,
+        "conversion_haircut": 0.0,
+        "net_reverse_saving_cr": 0.0,
+        "status": "scenario only; assumptions unvalidated"
+      },
+      {
+        "label": "Illustrative sensitivity A",
+        "cod_share": 0.75,
+        "prepaid_share": 0.25,
+        "blended_rto": 0.115,
+        "blended_bps_move": -50.0,
+        "orders_moved_to_prepaid": 27374999,
+        "orders_lost_at_checkout": 1368749,
+        "conversion_haircut": 0.05,
+        "net_reverse_saving_cr": 32.8,
+        "status": "scenario only; assumptions unvalidated"
+      },
+      {
+        "label": "Illustrative sensitivity B",
+        "cod_share": 0.7,
+        "prepaid_share": 0.3,
+        "blended_rto": 0.11,
+        "blended_bps_move": -100.0,
+        "orders_moved_to_prepaid": 54749999,
+        "orders_lost_at_checkout": 6569999,
+        "conversion_haircut": 0.12,
+        "net_reverse_saving_cr": 64.9,
+        "status": "scenario only; assumptions unvalidated"
+      },
+      {
+        "label": "Illustrative sensitivity C",
+        "cod_share": 0.65,
+        "prepaid_share": 0.35,
+        "blended_rto": 0.105,
+        "blended_bps_move": -150.0,
+        "orders_moved_to_prepaid": 82124999,
+        "orders_lost_at_checkout": 16424999,
+        "conversion_haircut": 0.2,
+        "net_reverse_saving_cr": 95.6,
+        "status": "scenario only; assumptions unvalidated"
+      }
+    ],
+    "central_case_prepaid_share": 0.3,
+    "central_blended_rto": 0.11,
+    "central_net_saving_cr": 64.9,
+    "aggressive_blended_rto": 0.105,
+    "aggressive_bps_move": -150.0,
+    "aggressive_exceeds_model_case": false,
+    "why_not_the_headline": "Payment-mix values and checkout haircuts are assumptions. The output is sensitivity arithmetic only; it does not support a mix target or recommend changing COD availability.",
+    "not_measured": [
+      "checkout conversion loss if COD is withdrawn for a tier or category",
+      "the share of COD orders above the partial-COD value threshold"
+    ]
+  },
+  "model_reconciliation": {
+    "daily_cod_rto_baseline": 240000.0,
+    "blueprint_budget_rescues_per_day": 14998.043052837573,
+    "uplift_persuadable_pct": 12.2,
+    "uplift_economic_threshold": 0.29167,
+    "classifier_screen_pct_of_orders": 5.0,
+    "refusers_passing_uplift_gate_per_day": 29280.0,
+    "orders_screened_per_day": 12000.0,
+    "budgeted_vs_uplift_ratio": 0.5122950819672131,
+    "coupon_cost_at_uplift_volume_cr": 37.4052,
+    "coupon_cost_at_budgeted_volume_cr": 19.16,
+    "budget_covers_pct_of_qualified": 0.512228246340081,
+    "cash_pool_is_conservative_subset": true,
+    "unfunded_qualified_volume_per_day": 14281.956947162427,
+    "gate2_release_cr": 18.245200000000004
+  },
+  "cost_of_ml": {
+    "orders_scored_per_year": 547500000,
+    "telemetry_attempts_per_year": 711750000.0,
+    "p99_ms": 0.75,
+    "total_compute_seconds_per_year": 944437.5,
+    "compute_hours_per_year": 262.34375,
+    "provisioned_instances": 32,
+    "infrastructure_cost_cr": 0.1536,
+    "note": "Illustrative arithmetic uses 32 assumed general-purpose instances at an assumed annual unit cost and a local timing sample. It is not a cloud quote or deployment estimate."
+  },
+  "per_rescue_unit_economics": {
+    "gross_avoidable_reverse_freight_rs": 120.0,
+    "gross_basis": "case pack, \"Reverse Logistics Cost for an RTO shipment = 120 INR / Order\". The Rs 50 forward leg is already incurred on a failed parcel and is NOT a saving, so the ceiling is Rs 120, not Rs 170.",
+    "cost_lines": [
+      {
+        "line": "incremental_rider_pay_for_successful_attempt",
+        "low_rs": 25.0,
+        "central_rs": 35.0,
+        "high_rs": 50.0,
+        "status": "ASSUMPTION - not a case input; see the deck note"
+      },
+      {
+        "line": "payment_processing_on_doorstep_collect",
+        "low_rs": 5.0,
+        "central_rs": 8.0,
+        "high_rs": 12.0,
+        "status": "ASSUMPTION - not a case input; see the deck note"
+      },
+      {
+        "line": "customer_incentive_separate_randomised_arm_only",
+        "low_rs": 0.0,
+        "central_rs": 0.0,
+        "high_rs": 35.0,
+        "status": "ASSUMPTION - not a case input; see the deck note"
+      },
+      {
+        "line": "support_and_recontact_handling",
+        "low_rs": 2.0,
+        "central_rs": 4.0,
+        "high_rs": 8.0,
+        "status": "ASSUMPTION - not a case input; see the deck note"
+      }
+    ],
+    "total_incremental_cost_rs": {
+      "low": 32.0,
+      "central": 47.0,
+      "high": 105.0
+    },
+    "net_per_incremental_rescue_rs": {
+      "low": 88.0,
+      "central": 73.0,
+      "high": 15.0
+    },
+    "still_positive_across_the_whole_range": true,
+    "what_would_change_this": [
+      "actual rider pay for an additional successful attempt",
+      "the PSP fee schedule for a doorstep collect on a Meesho order value",
+      "whether an incentive arm is switched on at all",
+      "support and re-contact handling time per recovered parcel"
+    ],
+    "not_a_forecast": "Cost lines are budget assumptions awaiting quotes and pilot measurement. Only the Rs 120 benefit ceiling is a case input, and the brief itself labels it an illustrative approximation."
+  },
+  "funded_intervention_volume": {
+    "daily_cod_rto_pool": 240000.0,
+    "uplift_persuadable_pct": 12.2,
+    "uplift_economic_threshold": 0.29167,
+    "qualified_per_day": 29280.0,
+    "funded_per_day": 15000.0,
+    "unfunded_per_day": 14280.0,
+    "funded_share_of_qualified_pct": 51.229508196721305,
+    "coupon_cost_at_qualified_cr": 37.4052,
+    "coupon_cost_at_funded_cr": 19.1625,
+    "unfunded_tranche_cr": 18.2427,
+    "decision": "CAP_THE_PROGRAMME",
+    "decision_rationale": "Impact is computed on the FUNDED volume, not the qualified volume. The qualified figure comes from a CATE estimated on simulated randomisation, so pre-committing the remaining tranche would assume the effect before measuring it. The tranche is held as a Gate-2 option that is only released once a real controlled test confirms the effect.",
+    "what_reconciling_the_instead_would_require": "Releasing the unfunded tranche costs Rs 18.24 Cr a year and buys 14,280 additional offers a day. That is a Gate-2 decision for a measured effect, not a planning assumption.",
+    "cost_of_the_cap": "Capping at 15,000/day forgoes the modelled effect on 14,280/day. We state that cost rather than claiming the benefit."
+  },
+  "scale_scenarios": {
+    "scenarios": [
+      {
+        "label": "Conservative planning scenario",
+        "daily_orders": 1500000.0,
+        "status": "OUR ASSUMPTION - not in the case brief",
+        "annual_orders": 547500000.0,
+        "daily_cod_rto_pool": 240000.0,
+        "qualified_per_day": 29280.0,
+        "funded_per_day": 15000.0,
+        "funded_share_of_qualified_pct": 51.229508196721305,
+        "coupon_cost_at_funded_cr": 19.1625,
+        "rescues_needed_to_cover_programme": 11578723.40425532
+      },
+      {
+        "label": "Prospectus-implied Valmo run-rate",
+        "daily_orders": 3842099.447513812,
+        "status": "PRIMARY - Meesho prospectus, six months ended 30 Sep 2025",
+        "annual_orders": 1402366298.3425415,
+        "daily_cod_rto_pool": 614735.91160221,
+        "qualified_per_day": 74997.78121546961,
+        "funded_per_day": 15000.0,
+        "funded_share_of_qualified_pct": 20.000591693379306,
+        "coupon_cost_at_funded_cr": 19.1625,
+        "rescues_needed_to_cover_programme": 11578723.40425532
+      }
+    ],
+    "multiple_between_anchors": 2.561399631675875,
+    "funded_share_caveat": "The same Rs 19.16 Cr ceiling funds 51% of the qualified pool in the conservative scenario but only 20% at prospectus scale.",
+    "not_a_case_input": "The brief states no order volume, no hub count and no rider count. Both rows are scenarios. The prospectus row measures Valmo shipments, which is not the same population as Valmo COD orders and is not netted for the prepaid share."
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "artifact": "source-scoped research summary; not an RTO cause model",
+  "method": "Separate each source by population, unit, evidence type, and transfer limits; do not average unlike definitions.",
+  "cause_mix": {
+    "status": "NOT_ESTIMATED",
+    "reason": "No Valmo order-level outcomes or cause-coded records were supplied. Published sources use non-equivalent populations and taxonomies.",
+    "prohibited_inference": "Do not combine case inputs and vendor categories into an ungrounded Valmo percentage distribution."
+  },
+  "source_scope": [
+    {
+      "source": "DICE case brief",
+      "evidence_type": "assignment-provided illustrative inputs",
+      "supports": [
+        "planning calculations using stated case assumptions"
+      ],
+      "does_not_support": [
+        "current Valmo performance",
+        "order volume",
+        "cause shares",
+        "expected treatment effect"
+      ]
+    },
+    {
+      "source": "Meesho Q1 FY27 shareholder letter",
+      "url": "https://static-assets.meesho.com/investor-relations/1784806298911/Q1ShareholdersLetter.pdf",
+      "evidence_type": "company-reported marketplace disclosure",
+      "supports": [
+        "about 37% of shipped orders were prepaid in Q1 FY27",
+        "the company attributes lower RTO/cancellations YoY to TrustMesh and predictive-routing investments"
+      ],
+      "does_not_support": [
+        "Valmo-specific cause shares",
+        "the quantified contribution of each cited investment",
+        "causal impact attributable to this proposal"
+      ]
+    },
+    {
+      "source": "ClickPost 90-Day RTO Reduction Playbook",
+      "url": "https://www.clickpost.ai/90-day-rto-reduction-playbook",
+      "evidence_type": "vendor-authored playbook and claims",
+      "supports": [
+        "a description of the vendor's own categories and product recommendations"
+      ],
+      "does_not_support": [
+        "independent effectiveness",
+        "a false courier-attempt-status rate",
+        "transferable Valmo lift"
+      ]
+    },
+    {
+      "source": "UPU Think Tank Brief No. 2/2025",
+      "url": "https://www.upu.int/UPU/media/upu/publications/202507dprmThinkTankBriefNo2-2025.pdf",
+      "evidence_type": "global postal-operator analysis published by UPU",
+      "supports": [
+        "external context on address accuracy and first-delivery outcomes"
+      ],
+      "does_not_support": [
+        "an India e-commerce or Valmo effect size"
+      ]
+    }
+  ],
+  "repository_prototypes": {
+    "status": "SYNTHETIC_OR_ILLUSTRATIVE",
+    "limits": "Generated orders, labels, assignments, model scores, and simulations are not Valmo observations and do not validate production performance."
+  },
+  "pilot_requirements": [
+    "Obtain authorized, de-identified baseline events; define eligibility, outcome horizon, exclusions, and missingness.",
+    "Audit reason codes against underlying records; retain an unknown category.",
+    "Map rider, route, hub, carrier, and pincode overlap before choosing an assignment unit.",
+    "Pre-register the primary outcome, power/MDE, stopping rules, and customer, rider, seller, service, and privacy guardrails.",
+    "Report concurrent-control effects with uncertainty and all incremental costs before claiming net value."
+  ]
+}
